@@ -25,10 +25,10 @@ public void unionElements(int p, int q) // 合并元素p和元素q所属的集�
         int[][] res = {{1,2},{2,4},{6,7},{3,4}};
         UF UF = new UnionFind(10);
         for(int i=0;i<res.length;i++){
-            UF.add(res[i][0],res[i][1]);
+            UF.unionElements(res[i][0],res[i][1]);
         }
-        System.out.println(UF.isSystem(1, 6));
-        System.out.println(UF.isSystem(1, 4));
+        System.out.println(UF.isConnected(1, 6));
+        System.out.println(UF.isConnected(1, 4));
     }
 ```
 
